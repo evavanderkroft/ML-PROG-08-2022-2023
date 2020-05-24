@@ -16,8 +16,8 @@ class Jellyfish {
 
         // this.div.addEventListener("click", () => this.killjellyfish())
 
-        let posx = Math.random() * window.innerWidth - this.div.clientWidth
-        let posy = Math.random() * window.innerHeight - this.div.clientHeight
+        let posx = Math.random() * (window.innerWidth - this.div.clientWidth)
+        let posy = Math.random() * (window.innerHeight - this.div.clientHeight)
         this.div.style.transform = `translate(${posx}px, ${posy}px)`
 
         this.changeColor()

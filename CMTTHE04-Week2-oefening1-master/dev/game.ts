@@ -14,7 +14,12 @@ class Game {
         this.jellyfish = new Jellyfish()
         this.gameLoop();
 
+        for (let i = 0; i < 100; i++) {
+            new Fish
+            new Bubble
+            new Jellyfish
 
+        }
         // const bubblefish = new Fish()
         // bubblefish.draw();
 

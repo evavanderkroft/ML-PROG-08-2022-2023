@@ -2,8 +2,9 @@ class Fish {
 
     div: HTMLElement
     fish: Fish
-    x: number = 0
-    y: number = 0
+    posx: number = 0
+    posy: number = 0
+    color: number
 
 
     constructor() {
@@ -12,66 +13,28 @@ class Fish {
 
         let game = document.getElementsByTagName("game")[0]
         game.appendChild(this.div)
-        // this.draw()
-
-        // this.div.addEventListener("click", () => this.killFish())
-
-        let posx = Math.random() * window.innerWidth - this.div.clientWidth
-        let posy = Math.random() * window.innerHeight - this.div.clientHeight
-        this.div.style.transform = `translate(${posx}px, ${posy}px)`
+        this.posx = Math.random() * (window.innerWidth - this.div.clientWidth)
+        this.posy = Math.random() * (window.innerHeight - this.div.clientHeight)
+        this.div.style.transform = `translate(${this.posx}px, ${this.posy}px)`
 
         this.changeColor()
     }
 
     changeColor() {
-        let color = Math.random() * 360
-        this.div.style.filter = `hue-rotate(${color}deg)`
+        this.color = Math.random() * 360
+        this.div.style.filter = `hue-rotate(${this.color}deg)`
     }
 
     move() {
-        this.x += 3
-        this.y += 1
+        this.posx += 3
+        this.posy += 1
 
-        this.div.style.transform = `translate (${this.x}px, ${this.y}px)`
+        this.div.style.transform = `translate (${this.posx}px, ${this.posy}px)`
     }
-
-
-    // draw() {
-    //         let posx = Math.random() * window.innerWidth
-    // let posy = Math.random() * window.innerHeight
-    //     let color = Math.random() * 360
-    //     this.div.style.transform = `translate(${posx}px, ${posy}px)`
-    //     this.div.style.filter = `hue-rotate(${color}deg)`
-    //     console.log('newfish')
-    // }
 
     killFish() {
         // console.log(this.div)
         this.div.classList.add("dead")
     }
 }
-
-//     constructor() {
-//         console.log("Fish was created!")
-
-//         this.killFish()
-//     }
-
-//     killFish() {
-//         console.log("Aargh!")
-//     }
-
-//     addFish() {
-//         let fish = document.createElement("fish")
-//         fish.addEventListener("click", onFishClick)
-//         game.appendChild(fish)
-
-//         let posx = Math.random() * window.innerWidth - fish.clientWidth
-//         let posy = Math.random() * window.innerHeight - fish.clientHeight
-//         let color = Math.random() * 360
-//         fish.style.transform = `translate(${posx}px, ${posy}px)`
-//         fish.style.filter = `hue-rotate(${color}deg)`
-//     }
-// }
-
 

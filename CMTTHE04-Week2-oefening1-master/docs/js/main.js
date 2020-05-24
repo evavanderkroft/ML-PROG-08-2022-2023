@@ -25,25 +25,25 @@ var Bubble = (function () {
 var Fish = (function () {
     function Fish() {
         var _this = this;
-        this.x = 0;
-        this.y = 0;
+        this.posx = 0;
+        this.posy = 0;
         this.div = document.createElement("fish");
         this.div.addEventListener("click", function () { return _this.killFish(); });
         var game = document.getElementsByTagName("game")[0];
         game.appendChild(this.div);
-        var posx = Math.random() * window.innerWidth - this.div.clientWidth;
-        var posy = Math.random() * window.innerHeight - this.div.clientHeight;
-        this.div.style.transform = "translate(" + posx + "px, " + posy + "px)";
+        this.posx = Math.random() * (window.innerWidth - this.div.clientWidth);
+        this.posy = Math.random() * (window.innerHeight - this.div.clientHeight);
+        this.div.style.transform = "translate(" + this.posx + "px, " + this.posy + "px)";
         this.changeColor();
     }
     Fish.prototype.changeColor = function () {
-        var color = Math.random() * 360;
-        this.div.style.filter = "hue-rotate(" + color + "deg)";
+        this.color = Math.random() * 360;
+        this.div.style.filter = "hue-rotate(" + this.color + "deg)";
     };
     Fish.prototype.move = function () {
-        this.x += 3;
-        this.y += 1;
-        this.div.style.transform = "translate (" + this.x + "px, " + this.y + "px)";
+        this.posx += 3;
+        this.posy += 1;
+        this.div.style.transform = "translate (" + this.posx + "px, " + this.posy + "px)";
     };
     Fish.prototype.killFish = function () {
         this.div.classList.add("dead");
@@ -58,6 +58,11 @@ var Game = (function () {
         this.bubble = new Bubble();
         this.jellyfish = new Jellyfish();
         this.gameLoop();
+        for (var i = 0; i < 100; i++) {
+            new Fish;
+            new Bubble;
+            new Jellyfish;
+        }
     }
     Game.prototype.gameLoop = function () {
         var _this = this;
@@ -74,8 +79,8 @@ var Jellyfish = (function () {
         this.div = document.createElement("jellyfish");
         var game = document.getElementsByTagName("game")[0];
         game.appendChild(this.div);
-        var posx = Math.random() * window.innerWidth - this.div.clientWidth;
-        var posy = Math.random() * window.innerHeight - this.div.clientHeight;
+        var posx = Math.random() * (window.innerWidth - this.div.clientWidth);
+        var posy = Math.random() * (window.innerHeight - this.div.clientHeight);
         this.div.style.transform = "translate(" + posx + "px, " + posy + "px)";
         this.changeColor();
     }
