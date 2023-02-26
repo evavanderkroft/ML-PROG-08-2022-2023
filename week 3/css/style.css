@@ -1,0 +1,61 @@
+
+html, body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: pink;
+}
+
+#header {
+    background-color: #363A3D;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+}
+
+#img{
+    margin: 15px;
+    width: 350px;
+}
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    font-weight: thin;
+}
+
+#empty {
+    width: 400px;
+    margin: 15px;
+}
+#label {
+    width: 533px;
+    height: 20px;
+    color: white;
+    background-color: black;
+}
+
+button {
+    background-color: lightblue;
+    padding: 8px 12px;
+    margin: 4px;
+    font-size: 1em;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+/* flip the video image */
+video {
+    transform: scaleX(-1);
+}
+
+#img:not([src=""]) #empty{
+display: none;
+}
