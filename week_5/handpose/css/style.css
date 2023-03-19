@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+    background-color: plum;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+#predictionArea{
+    background-color:purple;
+    width:100%;
+    margin:0.5vw, 0.5vw, 0,5vw;
+    height: 200px;
+    position:absolute;
+    bottom:0;
+    color:white;
+}
+
+#predictionarea h1, #predictionArea h2{
+    text-align: center;
+}
+
+#predictionArea p{
+    text-align: center;
+}
+
+img{
+    width:40vw;
+}
+
+#array {
+    display:none;
+}
+
+button {
+    background-color: plum;
+    text-align: center;
+    /* width:5%; */
+    border-radius: 1vh;
+    padding: 5px;
+    font-size:15px;
+    cursor: pointer;
+    
+  }
+
+
+video {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    display:none;
+    width: auto;
+    height: 20vh;
+}
+
+.buttons{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+    margin-top: 30px;
+    
+}
+canvas{
+    max-height: 300px;
+    padding-top:30px;
+}
