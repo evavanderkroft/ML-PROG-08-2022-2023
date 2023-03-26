@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: palevioletred;
+    margin: 0;
+    padding: 0;
+}
+
+h2, h3, h4 {
+    margin-top: 0;
+}
+
+div {
+    background-color: white;
+    padding: 15px;
+    margin: 10px;
+}
+
+#view {
+    overflow: scroll;
+    padding: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+table, tr, td {
+    border: 3px solid black;
+}
+
+td {
+    padding: 5px;
+}
+
+.main-row{
+    background-color: pink;
+}

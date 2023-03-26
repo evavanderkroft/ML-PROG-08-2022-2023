@@ -1,0 +1,20 @@
+
+link naar screencast:
+https://youtu.be/yvMgqAMJUM4
+
+Wat is het doel van je experiment?
+Het doel is om er achter te komen of een van de paddenstoelen dus giftig is of niet. 
+Dit kan handig zijn als je in het bos paddenstoelen aan het plukken ben en er achter wil komen of de paddenstoelen die je net hebt geplukt wel eetbaar zijn. 
+
+Wat is de data (input), en wat wordt er voorspeld (output) ?
+De data is de gegeven data van Kaggle van de mushroom csv, en er wordt voorspeld of de paddenstoelen dus edible of poisonous zijn. 
+
+Welk algoritme of library wordt gebruikt?
+Ik maak gebruik van papaparse, een fijne tool om de data uit het csv om te zetten naar json en andersom. 
+Ook maak ik gebruik van vegatree, wat de decision tree tekent met behulp van de VEGA library. 
+
+Is het doel behaald? Kan je de opgedane kennis gebruiken voor het eindproject? Wat vond jij makkelijk of moeilijk aan het programmeren?
+Ik denk dat mijn doel is behaald, het laat zien wat ik wilde en ook de confusion matrix is gelukt uit te werken. 
+Ik weet niet of ik de opgedane informatie kan gebruiken voor het eindproject omdat ik nog geen concreet beeld heb voor wat ik wil maken. 
+Daarentegen is het altijd handig om deze informatie met zich mee te nemen. 
+Ik had het meeste moeite met de prediction maken, en het minste met het invullen van de decision tree zelf. 
