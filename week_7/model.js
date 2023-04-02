@@ -4,7 +4,6 @@ const cylinderDiv = document.getElementById("cylinders");
 const resultDiv = document.getElementById("result");
 
 predictButton.addEventListener("click", (e) => {
-  // document.getElementById("field").value
   e.preventDefault();
   makePrediction(+horsepowerDiv.value, +cylinderDiv.value);
 });

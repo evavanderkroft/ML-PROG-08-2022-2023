@@ -7,7 +7,6 @@ const resultDiv = document.getElementById("result");
 
 // Event listener
 predictButton.addEventListener("click", (e) => {
-  // document.getElementById("field").value
   e.preventDefault();
   makePrediction(
     +document.getElementById("field").value,
