@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Load three.js -->
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+    
+    <!-- GPU backend -->
+    <script defer src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@2.1.0/dist/tf-backend-webgl.js"></script>
+    <!-- CPU backend -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-cpu"></script> -->
+    <!-- WASM backend -->
+    <!-- <script src="https://unpkg.com/@tensorflow/tfjs-backend-wasm@2.1.0/dist/tf-backend-wasm.js"></script> -->
+    
+    <script defer src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+    <script defer src="./src/knear.js"></script>
+    <script defer src="./src/index.js"></script>
+</head>
+
+<body>
+    <h1>HANDPOSE API to test easy sign language gestures</h1>
+    <p>Learn these different gestures by training the AI!  </p>
+    <div id="container">
+        <canvas id="output" ></canvas>
+        <video id="video" playsinline ></video>
+    </div>
+    <div id="predictionArea">
+        <p> train a minimum of 5 times to make it work the best it can!</p>
+        <div class="buttons">
+            <input type="text" id="label">
+            <button id="train">train</button>
+            <button id="classify">test it out!</button>
+            <button id="save">Save the data</button>
+        </div>
+            <h2>Prediction:</h2>
+            <p id="prediction"></p>
+        </div>
+    <div id="array"></div>
+</body>
