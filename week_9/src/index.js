@@ -4,6 +4,7 @@ let ctx, canvas;
 const log = document.querySelector("#array");
 const VIDEO_WIDTH = 720;
 const VIDEO_HEIGHT = 405;
+import kNear from "../src/knear.js";
 
 let data;
 const knn = new kNear(3);
@@ -27,7 +28,7 @@ let trainButton = document.getElementById("train");
 let classifyButton = document.getElementById("classify");
 let SaveButton = document.getElementById("save");
 let predictionTxt = document.getElementById("prediction");
-predictionArray = new Array();
+// predictionArray = new Array();
 
 //
 // start de applicatie
@@ -60,6 +61,8 @@ function classify() {
 }
 
 async function save() {
+  
+  await knn.save('')
   //   model = await handpose.load();
   const modelJSON = JSON.stringify(model, replacer);
   //   fs.writeFile("/", modelJSON);

@@ -11,32 +11,37 @@
 // let count = 0;
 
 // // Load the image model and setup the webcam
-// async function init() {
-//   const modelURL = URL + "model.json";
-//   const metadataURL = URL + "metadata.json";
+const startButton = document.getElementById("button-start")
+startButton.addEventListener("click", init)
 
-//   // load the model and metadata
-//   // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-//   // or files from your local hard drive
-//   // Note: the pose library adds "tmImage" object to your window (window.tmImage)
-//   model = await tmImage.load(modelURL, metadataURL);
-//   maxPredictions = model.getTotalClasses();
+init()
 
-//   // Convenience function to setup a webcam
-//   const flip = true; // whether to flip the webcam
-//   webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
-//   await webcam.setup(); // request access to the webcam
-//   await webcam.play();
-//   window.requestAnimationFrame(loop);
+async function init() {
+  // const modelURL = URL + "model.json";
+  // const metadataURL = URL + "metadata.json";
 
-//   // append elements to the DOM
-//   document.getElementById("webcam-container").appendChild(webcam.canvas);
-//   labelContainer = document.getElementById("label-container");
-//   for (let i = 0; i < maxPredictions; i++) {
-//     // and class labels
-//     labelContainer.appendChild(document.createElement("div"));
-//   }
-// }
+  // load the model and metadata
+  // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
+  // or files from your local hard drive
+  // Note: the pose library adds "tmImage" object to your window (window.tmImage)
+  model = await tmImage.load(modelURL, metadataURL);
+  maxPredictions = model.getTotalClasses();
+
+  // Convenience function to setup a webcam
+  const flip = true; // whether to flip the webcam
+  webcam = new tmImage.Webcam(300, 300, flip); // width, height, flip
+  await webcam.setup(); // request access to the webcam
+  await webcam.play();
+  window.requestAnimationFrame(loop);
+
+  // // append elements to the DOM
+  // document.getElementById("webcam-container").appendChild(webcam.canvas);
+  // labelContainer = document.getElementById("label-container");
+  // for (let i = 0; i < maxPredictions; i++) {
+  //   // and class labels
+  //   labelContainer.appendChild(document.createElement("div"));
+  // }
+}
 
 // async function uploadModel() {
 //   const modelURL = URL + "model.json";
@@ -79,6 +84,8 @@ const log = document.querySelector("#array");
 const VIDEO_WIDTH = 720;
 const VIDEO_HEIGHT = 405;
 
+import kNear from "../src/knear.js";
+
 let data;
 const knn = new kNear(3);
 
@@ -103,10 +110,11 @@ let fingerLookupIndices = {
 
 async function main() {
   model = await handpose.load({
-    modelPath: modelPath + "/model.json",
-    metadataPath: modelPath + "/metadata.json",
-    weightsPath: modelPath + "/weights.bin",
+    modelPath: "../src/model.json",
+    metadataPath: "../src/metadata.json",
+    weightsPath: "../src/weights.bin",
   });
+
   const video = await setupCamera();
   video.play();
   startLandmarkDetection(video);
@@ -164,6 +172,7 @@ async function setupCamera() {
 //
 
 async function startLandmarkDetection(video) {
+  console.log('landmarks')
   videoWidth = video.videoWidth;
   videoHeight = video.videoHeight;
 

@@ -31,14 +31,15 @@
                             <img src="./img/please-sign-language.gif" style="width: 300px; height: 300px; padding:0px; background-size:cover;">
                         </div>
                         <div class="col-6">
-                            <div id="webcam-container"></div>
+                            <!-- <div id="webcam-container"></div> -->
+                            <div id="video"></div>
                         </div>
                     </div>
                    
                 </div>
                 <div id="label-container"></div>
                     <div class="card-button d-flex justify-content-center align-center">
-                        <button type="button" onclick="init()" class="btn btn-success " id="button-start">Start Camera </button>
+                        <button type="button" class="btn btn-success " id="button-start">Start Camera </button>
                     </div>
             </div>
         </div>
@@ -47,7 +48,10 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+<script src="https://unpkg.com/@tensorflow-models/handpose@0.0.6/dist/handpose.js"></script>
+<script defer src="https://unpkg.com/@tensorflow/tfjs-converter@2.1.0/dist/tf-converter.js"></script>
+<script defer src="https://unpkg.com/@tensorflow/tfjs-core@2.1.0/dist/tf-core.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+<script defer src="js/main.js" type="module"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-class kNear {
+export default class kNear {
     constructor(k) {
         this.k = k
         this.training = []
