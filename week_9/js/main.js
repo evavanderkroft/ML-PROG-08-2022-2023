@@ -8,7 +8,7 @@ const ctx = canvas.getContext("2d");
 const predictionLabel = document.getElementById("prediction-label");
 
 let frameSequence = [];
-const sequenceLength = 10;
+const sequenceLength = 5;
 
 /**
  *
