@@ -446,8 +446,10 @@ async function loadModelFromFolder(url) {
 
 fineTuneButton.addEventListener("click", async () => {
   // Load the local model and label map
-  const localModel = await loadModelFromFolder("/model/model.json");
-  const localLabelMap = await loadLabelMapFromFolder("/model/labelMap.json");
+  const localModel = await loadModelFromFolder("../../model/model.json");
+  const localLabelMap = await loadLabelMapFromFolder(
+    "../../model/labelMap.json"
+  );
 
   if (!localModel || !localLabelMap) {
     console.error(
