@@ -16,7 +16,7 @@ const recordingIndicator = document.getElementById("recording-indicator");
 
 // Initialize variables for collecting a sequence of frames
 let frameSequence = [];
-const sequenceLength = 5; // Adjust this to set the length of the sequence
+const sequenceLength = 10; // Adjust this to set the length of the sequence
 
 /**
  *
