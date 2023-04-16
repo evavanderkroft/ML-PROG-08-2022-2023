@@ -1,0 +1,97 @@
+#recording-indicator {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+div#label-container {
+  color: black;
+}
+
+a {
+  margin: 10px;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: rgb(182, 214, 168);
+  background: linear-gradient(
+    0deg,
+    rgba(182, 214, 168, 1) 0%,
+    rgba(255, 255, 255, 1) 34%
+  );
+  height: 100vh;
+  padding: 50px;
+}
+.card {
+  border-radius: 15px;
+  height: 80vh;
+  padding: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+  padding-top: 5%;
+}
+
+.card-sm {
+  height: 80vh;
+}
+
+h1 {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+
+.row-camera {
+  align-items: center;
+  justify-content: space-around;
+  width: 70vw;
+}
+
+.col-6 {
+  justify-self: center;
+  width: 30%;
+  height: 30vh;
+}
+
+#logo {
+  padding-top: 0;
+}
+
+.camerause {
+  padding-top: 300px;
+}
+
+#webcam {
+  display: none;
+}
+
+.video {
+  position: relative;
+  height: 100%;
+}
+
+#prediction-label {
+  width: fit-content;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+}

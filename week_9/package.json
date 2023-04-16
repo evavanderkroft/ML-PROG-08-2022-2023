@@ -1,0 +1,17 @@
+{
+  "name": "signlearn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.4.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
